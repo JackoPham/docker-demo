@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:11.4-alpine
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: postgres
+      POSTGRES_DB: tuan-example
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  api1:
+    image: service2-image
+    depends_on:
+      - db
+    ports:
+      - "3100:3100"
+  api2:
+    image: service1-image
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    
