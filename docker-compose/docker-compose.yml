@@ -11,23 +11,17 @@ services:
     ports:
       - "5432:5432"
   api1:
-    build: ./sample1
-    container_name: sample-service1
-    ports:
-     - "3000:3000"
-    # volumes:
-    #  - ./sample1/:/app
+    image: service2-image
     restart: always
     depends_on:
-     - db
+      - db
+    ports:
+      - "3100:3100"
   api2:
-    build: ./sample2
-    container_name: sample-service2
-    ports:
-     - "3100:3100"
-    # volumes:
-    #  - ./sample2/:/app
+    image: service1-image
     restart: always
     depends_on:
-     - db
-  
+      - db
+    ports:
+      - "3000:3000"
+    
