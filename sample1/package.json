@@ -21,7 +21,7 @@
   "dependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
-    "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/platform-express": "^9.2.1",
     "aluha-ezcode-helper": "^2.3.3",
     "fs-extra": "^8.1.0",
     "jsonwebtoken": "^8.5.1",
