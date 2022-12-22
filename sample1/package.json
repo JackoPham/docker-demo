@@ -24,7 +24,7 @@
     "@nestjs/platform-express": "^6.0.0",
     "aluha-ezcode-helper": "^2.3.3",
     "fs-extra": "^8.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3"
